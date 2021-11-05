@@ -1,0 +1,6 @@
+{% extends "base" %}
+
+{% block content %}
+    <h1>This is a simple demo!</h1>
+    <p>The version is {{ version }}</p>
+{% endblock content %}
