@@ -1,15 +1,16 @@
-#[macro_use] extern crate rocket;
+#[macro_use]
+extern crate rocket;
 
-use std::collections::HashMap;
 use rocket_dyn_templates::Template;
+use std::collections::HashMap;
 
 const VERSION: &'static str = env!("CARGO_PKG_VERSION");
 
 #[get("/")]
 fn index() -> Template {
-    let mut context =  HashMap::new();
+    let mut context = HashMap::new();
     context.insert("version", VERSION);
-    Template::render("index",  context)
+    Template::render("index", context)
 }
 
 #[launch]
